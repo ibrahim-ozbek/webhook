@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t eaglehaslanded/python:latest .'
+				sh 'sudo docker build -t eaglehaslanded/python:latest .'
 			}
 		}
 
