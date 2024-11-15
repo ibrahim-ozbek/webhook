@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t eaglehaslanded/python:4 .'
+				sh 'docker build -t eaglehaslanded/python:5 .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push eaglehaslanded/python:4'
+				sh 'docker push eaglehaslanded/python:5'
 			}
 		}
 	}
