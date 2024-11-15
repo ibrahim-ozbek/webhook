@@ -11,14 +11,14 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'sudo docker build -t eaglehaslanded/python:latest .'
+				sh 'docker build -t eaglehaslanded/python:latest .'
 			}
 		}
 
 		stage('Login') {
 
 			steps {
-				sh 'echo $env.DOCKERHUB_CREDENTIALS_PSW | docker login -u $env.DOCKERHUB_CREDENTIALS_USR --password-stdin'
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
 			}
 		}
 
